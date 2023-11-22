@@ -3,8 +3,13 @@ public class Task4_1 {
         System.out.print(getMax(7,2,3));
         System.out.print(uppercaseChar('a'));
         System.out.print(uppercaseChar('K'));
-        System.out.print(uppercaseChar('@'));
-        System.out.print(fibonacci(5));
+        System.out.println(uppercaseChar('@'));
+        for (int i = 1; i <= 50; i++){
+            System.out.print(i+": ");
+            System.out.println(fibonacci(i));
+        }
+
+
     }
     public static int getMax(int a, int b, int c){
         int biggest = a;
@@ -27,10 +32,19 @@ public class Task4_1 {
     }
 
     public static int fibonacci(int n){
-        if (n < 2){
-            return n;
+        int a, b, c;
+        a = b = c = 1;
+        if (n > 46){
+            return -1;
         }
-        return fibonacci(n - 1) + fibonacci(n - 2);
-
+        if (n <= 2){
+            return 1;
+        }
+        for (int i = 3; i <= n; i++){
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        return c;
     }
 }
