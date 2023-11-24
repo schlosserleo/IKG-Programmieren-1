@@ -1,7 +1,7 @@
 public class Task4_B_1_1 {
 
     public static void main(String[] args) {
-        printHarmonicSeriesFormula(0);
+        printHarmonicSeriesFormula(2);
     }
 
     public static double getHarmonicSeriesAt(int n) {
