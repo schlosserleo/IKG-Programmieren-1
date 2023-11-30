@@ -4,8 +4,8 @@ public class Task5_1 {
         char[] stati = {'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'd', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'd', 'r', 'r', 'r', 'r', 'd', 'r', 'r', 'r', 'd', 'r', 'r', 'd', 'r', 'r', 'r', 'r', 'r', 'r', 'd', 'r', 'r', 'r', 'r', 'r', 'd', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'd', 'r', 'r', 'd', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'd', 'r', 'r', 'd', 'r', 'd', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'd', 'r', 'r', 'd', 'r', 'r', 'r', 'd', 'r', 'r', 'r', 'r', 'd', 'r', 'r', 'r', 'd', 'r', 'r', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd'};
         double[] recoveredMetrics = metrics(select(ages, filter(stati, 'r')));
         double[] deceasedMetrics = metrics(select(ages, filter(stati, 'd')));
-        System.out.println("Verstorben - Min: "+deceasedMetrics[0]+", Max: "+deceasedMetrics[1]+", Mean: "+deceasedMetrics[2]);
-        System.out.println("Genesen - Min: "+recoveredMetrics[0]+", Max: "+recoveredMetrics[1]+", Mean: "+recoveredMetrics[2]);
+        System.out.println("Verstorben - Min: " + deceasedMetrics[0] + ", Max: " + deceasedMetrics[1] + ", Mean: " + deceasedMetrics[2]);
+        System.out.println("Genesen - Min: " + recoveredMetrics[0] + ", Max: " + recoveredMetrics[1] + ", Mean: " + recoveredMetrics[2]);
     }
 
     public static double[] metrics(double[] values) {
@@ -46,7 +46,7 @@ public class Task5_1 {
 
     public static double[] select(double[] values, int[] indices) {
         double[] result = new double[indices.length];
-        for (int i = 0; i < indices.length; i++){
+        for (int i = 0; i < indices.length; i++) {
             result[i] = values[indices[i]];
         }
         return result;

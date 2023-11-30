@@ -3,25 +3,23 @@ public class Task4_B_1_2 {
         String encryptedText = "";
         String decryptedText = "";
         String text = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKMLNOPQRSTUVWXYZ";
-        for (int i = 0; i < text.length(); i++){
+        for (int i = 0; i < text.length(); i++) {
             encryptedText += encryptCharacter(text.charAt(i), 150);
         }
         System.out.println(encryptedText);
 
-        for (int i = 0; i < encryptedText.length(); i++){
+        for (int i = 0; i < encryptedText.length(); i++) {
             decryptedText += decryptCharacter(encryptedText.charAt(i), 150);
         }
         System.out.println(decryptedText);
     }
 
     public static char encryptCharacter(char c, int offset) {
-        if (isLowerCase(c)){
+        if (isLowerCase(c)) {
             return (char) ((((c + offset) - 97) % 26) + 97);
-        }
-        else if (isUpperCase(c)){
+        } else if (isUpperCase(c)) {
             return (char) ((((c + offset) - 65) % 26) + 65);
-        }
-        else{
+        } else {
             return c;
         }
     }
@@ -29,19 +27,17 @@ public class Task4_B_1_2 {
     public static char decryptCharacter(char c, int offset) {
         int offsetCharLower = c - offset - 97;
         int offsetCharUpper = c - offset - 65;
-        while (offsetCharLower < 0){
+        while (offsetCharLower < 0) {
             offsetCharLower += 26;
         }
-        while (offsetCharUpper < 0){
+        while (offsetCharUpper < 0) {
             offsetCharUpper += 26;
         }
-        if (isLowerCase(c)){
+        if (isLowerCase(c)) {
             return (char) ((offsetCharLower % 26) + 97);
-        }
-        else if (isUpperCase(c)){
+        } else if (isUpperCase(c)) {
             return (char) ((offsetCharUpper % 26) + 65);
-        }
-        else{
+        } else {
             return c;
         }
 
