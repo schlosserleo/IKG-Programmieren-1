@@ -26,7 +26,7 @@ public class AgeMetrics {
     }
 
     public double getAverageAge(){
-        return ages.stream().mapToDouble(a -> a).sum();
+        return ages.stream().mapToDouble(a -> a).sum() / ages.size();
     }
 
     public boolean isEmpty(){

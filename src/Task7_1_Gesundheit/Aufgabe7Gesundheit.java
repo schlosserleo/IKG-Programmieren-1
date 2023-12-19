@@ -75,8 +75,10 @@ public class Aufgabe7Gesundheit {
         double[] recoveredMetrics = ageMetrics(recoveredPatients);
         double[] deceasedMetrics = ageMetrics(deceasedPatients);
 
-        result[0] = "Verstorben - Min: " + deceasedMetrics[0] + ", Max: " + deceasedMetrics[1] + ", Mean: " + deceasedMetrics[2];
-        result[1] = "Genesen - Min: " + recoveredMetrics[0] + ", Max: " + recoveredMetrics[1] + ", Mean: " + recoveredMetrics[2];
+        result[0] = "Verstorben - Min: " + deceasedMetrics[0] + ", Max: " + deceasedMetrics[1] + ", Mean: " +
+                deceasedMetrics[2];
+        result[1] = "Genesen - Min: " + recoveredMetrics[0] + ", Max: " + recoveredMetrics[1] + ", Mean: " +
+                recoveredMetrics[2];
 
         return result;
     }

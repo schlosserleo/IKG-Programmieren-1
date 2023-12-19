@@ -1,6 +1,6 @@
 package Task7_1;
 
-public class Task7_1 {
+public class Extra_Task_1 {
     public static void main(String[] args) {
         char[] sequence = {'G', 'A', 'T', 'T', 'A', 'C', 'A'};
         char[] revcomp = reverseComplementSequence(sequence);
@@ -33,7 +33,8 @@ public class Task7_1 {
         return result;
     }
 
-    public static int countPurines(char[] sequence) {
+    public static int countPurines(char[] sequence)
+    {
         return countBases(sequence, 'A') + countBases(sequence, 'G');
     }
 

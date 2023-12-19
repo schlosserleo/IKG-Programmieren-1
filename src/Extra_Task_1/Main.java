@@ -1,8 +1,9 @@
-package Task7_1;
+package Extra_Task_1;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+        char[] a = new char[]{'A', 'T', 'G', 'C'};
+        Sequence seq = new Sequence(a);
+        System.out.println("Length: " + seq.reverseComplement());
     }
 }
