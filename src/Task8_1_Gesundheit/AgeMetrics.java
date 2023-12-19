@@ -12,14 +12,14 @@ public class AgeMetrics {
     }
 
     public double getMinAge(){
-       if (ages.stream().min(Double::compare).isPresent()){
+       if (!this.isEmpty()){
            return ages.stream().min(Double::compare).get();
        }
        return 0.0;
     }
 
     public double getMaxAge(){
-        if (ages.stream().max(Double::compare).isPresent()){
+        if (!this.isEmpty()){
             return ages.stream().max(Double::compare).get();
         }
         return 0.0;
