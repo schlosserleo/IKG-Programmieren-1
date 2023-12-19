@@ -1,3 +1,5 @@
+package Task7_1;
+
 public class Task7_1 {
     public static void main(String[] args) {
         char[] sequence = {'G', 'A', 'T', 'T', 'A', 'C', 'A'};

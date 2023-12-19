@@ -1,3 +1,5 @@
+package Task7_1_Kultur;
+
 public class Aufgabe7Kultur {
     public static void main(String[] args) {
         char[] stati = new char[]{'s', 's', 's', 'u', 'u', 'u', 's', 's', 'u', 'u', 'u', 'u', 's', 's', 'u', 's', 's', 's',
@@ -12,16 +14,16 @@ public class Aufgabe7Kultur {
 
     public static double[] priceMetrics(ArtObject[] objects) {
         double smallest, biggest;
-        smallest = biggest = objects[0].Price;
+        smallest = biggest = objects[0].price;
         double avg, sum;
         sum = 0;
         for (ArtObject x : objects) {
-            if (x.Price <= smallest) {
-                smallest = x.Price;
-            } else if (x.Price >= biggest) {
-                biggest = x.Price;
+            if (x.price <= smallest) {
+                smallest = x.price;
+            } else if (x.price >= biggest) {
+                biggest = x.price;
             }
-            sum += x.Price;
+            sum += x.price;
         }
         avg = sum / objects.length;
         return new double[]{smallest, biggest, avg};
@@ -30,14 +32,14 @@ public class Aufgabe7Kultur {
     public static ArtObject[] filterByStatus(ArtObject[] objects, char status) {
         int count = 0;
         for (ArtObject x : objects) {
-            if (x.Status == status) {
+            if (x.status == status) {
                 count++;
             }
         }
         ArtObject[] result = new ArtObject[count];
         count = 0;
         for (ArtObject x : objects) {
-            if (x.Status == status) {
+            if (x.status == status) {
                 result[count] = x;
                 count++;
             }
